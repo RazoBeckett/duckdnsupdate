@@ -1,6 +1,7 @@
 # Duck Dns Update
 
-this will update your duck dns domain with your current ip address or a custom ip address
+A simple command line tool to update your duckdns domain with your current public ip address
+Built with Go using the [Cobra](https://github.com/spf13/cobra) library
 
 ## Build
 
@@ -11,16 +12,18 @@ go build .
 ## Usage
 
 > [!IMPORTANT]
-> domain should be the domain name without the .duckdns.org part and without https:// prefix
+> domain should be the subdomain name without the .duckdns.org part and without https:// prefix
 
 - This will update your domain with your current public ip address
 
 ```bash
-ddnsupdate --domain <your-domain> --token <your-token>
+duckdnsupdate <subdomain> <token>
 ```
 
 - This will update your domain with the provide ip address
 
 ```bash
-ddnsupdate --domain <your-domain> --token <your-token> --ip <your-ip>
+duckdnsupdate <subdomain> <token> --ip-addr <ip-address>
 ```
+
+[LICENSE](LICENSE)
